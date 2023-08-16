@@ -1,0 +1,211 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(80, 50, 230, 0.5);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.select{
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.select h3{
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.options{
+    display: flex;
+    gap: 15px;
+}
+.options button{
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    line-height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+}
+.WinningTimes{
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: rgb(0, 120, 0);
+    font-size: 40px;
+    font-weight: bold;
+}
+.restartBtn,.clearScoreBtn{
+    height: 50px;
+    width: auto !important;
+    padding: 0 10px;
+    text-transform: capitalize !important;
+}
+.xo{
+    width: 70%;
+    height: 70vh;
+    position: relative;
+}
+.line{
+    position: absolute;
+    background-color: white;
+    border-radius: 20px;
+}
+.row{
+    width: 100%;
+    height: 10px;
+}
+.row1{
+    top: calc(100%/3);
+}
+.row2{
+    bottom: calc(100%/3);
+}
+.column{
+    width: 10px;
+    height: 100%;
+}
+.column1{
+    right:calc(100%/3) ;
+}
+.column2{
+    left:calc(100%/3);
+}
+
+.board{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    height: 100%;
+}
+.board span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+.filled{
+    pointer-events: none;
+}
+.lineThrough{
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+}
+.horizontal{
+    width: 100%;
+    height: 5px;
+}
+.horizontalTop{
+    top: calc(100%/6);
+}
+.horizontalMid{
+    top: calc(100%/2);
+}
+.horizontalBottom{
+    bottom: calc(100%/6);
+}
+.vartical{
+    height: 100%;
+    width: 5px;
+    top: 0;
+}
+.varticalLeft{
+    left: calc(100%/6);
+}
+.varticalMid{
+    left: calc(100%/2);
+}
+.varticalRight{
+    right: calc(100%/6);
+}
+.diagonal{
+    height: 100%;
+    width: 5px;
+    top: 0;
+    top: -100px;
+    
+}
+.diagonalRight{
+    transform: rotate(64deg);
+    left: calc(100%/2);
+    height: 200%;
+    top: -230px;
+}
+.diagonalLeft{
+    transform: rotate(-64deg);
+    left: calc(100%/2);
+    height: 200%;
+    top: -230px;
+}
+.none{
+    display: none !important;
+}
+.block{
+    display: block !important;
+}
+.green{
+    background-color: rgb(0, 150, 0) !important;
+}
+.noMatches{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.noMatches .popup{
+    width: 50%;
+    height: 30vh;
+    background-color: rgb(80, 50, 230);
+    color: white;
+    font-size: 60px;
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.noMatches .popup > span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    font-size: 22px;
+    border-radius: 5px;
+    color: white;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}

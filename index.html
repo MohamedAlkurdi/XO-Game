@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>XO</title>
+</head>
+<body>
+    <div class="select">
+        <h3>settings:</h3>
+        <div class="options">
+        <button id="x" class="role">X</button>
+        <span class="xWinningTimes WinningTimes">0</span>
+        <button id="o" class="role">O</button>
+        <span class="oWinningTimes WinningTimes">0</span>
+        <button class="restartBtn">restart</button>
+        <button class="clearScoreBtn">clear score</button>
+        </div>
+    </div>
+<div class="xo">
+    <span class=" line row row1"></span>
+    <span class=" line row row2"></span>
+    <span class=" line column column1"></span>
+    <span class=" line column column2"></span>
+        <div class="board">
+        <span data-empty="empty" class="spot s1"></span>
+        <span data-empty="empty" class="spot s2"></span>
+        <span data-empty="empty" class="spot s3"></span>
+        <span data-empty="empty" class="spot s4"></span>
+        <span data-empty="empty" class="spot s5"></span>
+        <span data-empty="empty" class="spot s6"></span>
+        <span data-empty="empty" class="spot s7"></span>
+        <span data-empty="empty" class="spot s8"></span>
+        <span data-empty="empty" class="spot s9"></span>
+        </div>
+    <span class="lineThrough none horizontal horizontalTop"></span>
+    <span class="lineThrough none horizontal horizontalMid"></span>
+    <span class="lineThrough none horizontal horizontalBottom"></span>
+    <span class="lineThrough none vartical varticalLeft"></span>
+    <span class="lineThrough none vartical varticalMid"></span>
+    <span class="lineThrough none vartical varticalRight"></span>
+    <span class="lineThrough none diagonal diagonalRight"></span>
+    <span class="lineThrough none diagonal diagonalLeft"></span>
+</div>
+<div class="noMatches none ">
+    <div class="popup">No Matches! <span><i id="closePopup" class="fa-solid fa-x"></i></span></div>
+</div>
+</body>
+<script src="./app.js"></script>
+</html>
